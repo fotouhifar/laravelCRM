@@ -1,4 +1,13 @@
 <?php
+//database parameters
+
+// for local environment
+define('DBNAME', 'laravelCRM');
+define('DBUSER', 'root');
+define('DBPASS', '');
+
+
+
 
 return [
 
@@ -56,9 +65,9 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env(DBNAME, DBNAME),
+            'username' => env(DBUSER, DBUSER),
+            'password' => env(DBPASS, ''),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',

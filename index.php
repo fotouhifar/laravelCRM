@@ -1,4 +1,4 @@
 <?PHP
 
-$url = "public/";
+$url = "public/home";
 header('Location: ' . $url);
