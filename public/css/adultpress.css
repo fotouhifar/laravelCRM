@@ -1,0 +1,26 @@
+#AdultPressLogo{
+    height: 25px;
+}
+#app-footer{
+    display: block;
+    vertical-align: bottom;
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    margin: 0;
+    padding: 1em;
+    min-width: 100%;
+    text-align: center;
+    color: 
+}
+
+.footer{
+    min-height: 50px; 
+}
+
+body {
+    font-family: 'Lato';
+}
+
+.fa-btn {
+    margin-right: 6px;
+}

@@ -1,2 +1,8 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+$backgroundColor: #777;
+
+.navbar{
+    background-color: $backgroundColor;
+
+}
