@@ -23,4 +23,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    // user is assign to another user
+    public function user(){
+        return $this->hasOne($user, $assignedto);
+    }
+    
+    
 }

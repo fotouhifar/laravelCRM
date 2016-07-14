@@ -13,12 +13,16 @@ class CreateUsersTable extends Migration {
     public function up() {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('group_id')->references('id')->on('user_groups');
+            $table->text('group_id');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('status');
+            $table->integer('assignedto')->unsigned()->index()
+                    ->reference('id')
+                    ->on('users');
         });
     }
 

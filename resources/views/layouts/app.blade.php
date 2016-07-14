@@ -14,10 +14,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
         <link rel="stylesheet" href="{{url('/')}}/css/adultpress.css">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
 
-        <style>
-
-        </style>
     </head>
     <body id="app-layout">
         <nav class="navbar navbar-default navbar-static-top">
@@ -50,7 +48,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (!Auth::guest())
-                        @if (Auth::user()->group_id==1)
+                        @if (Auth::user()->group_id=="Admin")
                         <li><a href = "{{ url('/admin') }}">Administration</a></li>
                         @else
                         @endif
@@ -80,6 +78,8 @@
         <!-- JavaScripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></script>
+        <script src="{{url('/')}}/js/adultpress.js" type="text/javascript"></script>
         {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 <footer id="app-footer" class="footer container navbar-fixed-bottom">

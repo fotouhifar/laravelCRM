@@ -27,3 +27,20 @@ body {
 .fullcontainer{
     width: 100%;
 }
+
+#users_list tr:nth-child(2n){
+    background-color:#fafaff;
+}
+
+
+#users_list tr:nth-child(2n+1){
+    background-color:#fafffa;
+}
+
+
+#users_list thead tr:first-child,
+#users_list thead tr:last-child
+{
+    background-color:#eff;
+}
+
